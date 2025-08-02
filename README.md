@@ -49,6 +49,11 @@ Creates and opens a new configuration file to set the `firewall_driver` to `open
 
 * `vi /etc/kolla/config/neutron/openvswitch_agent.ini`
 
+```
+[securitygroup]
+firewall_driver = openvswitch
+```
+
 Runs the Kolla Ansible deployment playbook to apply the new configuration and restart the `neutron-openvswitch-agent` containers.
 
 * `kolla-ansible deploy -i ./multinode`
